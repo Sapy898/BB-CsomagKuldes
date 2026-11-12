@@ -31,6 +31,8 @@
             {
                 Console.WriteLine(stop.GetDescription());
             }
-        }       
+            Console.WriteLine("____________________________________");
+            Console.WriteLine(route1.CountAdresses());
+        }
     }
 }

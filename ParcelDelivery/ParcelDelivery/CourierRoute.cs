@@ -19,5 +19,17 @@ namespace ParcelDelivery
         {
             _stops.Add(item);
         }
+        public int CountAdresses()
+        {
+            List<string> addresses = new List<string>();
+            foreach (IDeliverable stop in _stops)
+            {
+                if (!addresses.Contains(stop.GetAdress()))
+                {
+                    addresses.Add(stop.GetAdress());
+                }
+            }
+            return addresses.Count;
+        }
     }
 }
