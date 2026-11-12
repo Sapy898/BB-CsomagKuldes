@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\ParcelDelivery.csproj": {}
+    "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\ParcelDelivery.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\ParcelDelivery.csproj": {
+    "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\ParcelDelivery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\ParcelDelivery.csproj",
+        "projectUniqueName": "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\ParcelDelivery.csproj",
         "projectName": "ParcelDelivery",
-        "projectPath": "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\ParcelDelivery.csproj",
+        "projectPath": "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\ParcelDelivery.csproj",
         "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\obj\\",
+        "outputPath": "C:\\Users\\Marcell\\Desktop\\BB-CsomagKuldes\\BB-CsomagKuldes\\ParcelDelivery\\ParcelDelivery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
