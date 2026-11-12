@@ -18,6 +18,19 @@
             Parcel parcel4 = new Box("B201", "Pécs, Széchenyi tér 2.", 2000, 80);
             Console.WriteLine(parcel3.GetShippingFee());
             Console.WriteLine(parcel4.GetShippingFee());
-        }
+            Console.WriteLine("____________________________________");
+
+            FoodOrder order1 = new FoodOrder("Pizzéria Roma", "Budapest, Fő utca 1.");
+            Console.WriteLine(order1.GetDescription());
+            CourierRoute route1 = new CourierRoute();
+            route1.AddStop(parcel1);
+            route1.AddStop(parcel3);
+            route1.AddStop(order1);
+
+            foreach (IDeliverable stop in route1.Stops)
+            {
+                Console.WriteLine(stop.GetDescription());
+            }
+        }       
     }
 }
