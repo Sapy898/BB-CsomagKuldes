@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ParcelDelivery
 {
-    public abstract class Parcel
+    public abstract class Parcel : IDeliverable
     {
         private string _code;
         private string _adress;
@@ -52,5 +52,9 @@ namespace ParcelDelivery
                 return false;
         }
 
+        public string GetAdress()
+        {
+            return _adress;
+        }
     }
 }
