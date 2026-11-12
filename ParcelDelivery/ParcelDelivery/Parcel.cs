@@ -32,11 +32,17 @@ namespace ParcelDelivery
                 _weightGrams = value;
             }
         }
+        private List<TrackingEvent> _events;
+        public List<TrackingEvent> Events
+        {
+            get { return _events; }
+        }
         public Parcel(string code, string adress, int weightGrams)
         {
             _code = code;
             _adress = adress;
             _weightGrams = weightGrams;
+            _events = new List<TrackingEvent>();
         }
         public abstract int GetShippingFee();
 
@@ -56,5 +62,7 @@ namespace ParcelDelivery
         {
             return _adress;
         }
+
+        
     }
 }
