@@ -16,5 +16,10 @@ namespace ParcelDelivery
 
             return 8000+ (kg * 30);
         }
+
+        public override bool CanGoInLocker()
+        {
+            return false;
+        }
     }
 }

@@ -42,7 +42,7 @@ namespace ParcelDelivery
 
         public virtual string GetDescription()
         {
-            return $"{_code}: {_adress}, {_weightGrams}g, {this.GetDescription()}";
+            return $"{_code}: {_adress}, {_weightGrams}g, {this.GetShippingFee()} Ft";
         }
         public virtual bool CanGoInLocker()
         {
