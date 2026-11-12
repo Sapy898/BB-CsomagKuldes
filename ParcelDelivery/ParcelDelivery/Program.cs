@@ -12,6 +12,12 @@
 
             Console.WriteLine(parcel1.CanGoInLocker());
             Console.WriteLine(parcel2.CanGoInLocker());
+            Console.WriteLine("____________________________________");
+
+            Parcel parcel3 = new Box("B200", "Szeged, Kossuth utca 3.", 3500, 45);
+            Parcel parcel4 = new Box("B201", "Pécs, Széchenyi tér 2.", 2000, 80);
+            Console.WriteLine(parcel3.GetShippingFee());
+            Console.WriteLine(parcel4.GetShippingFee());
         }
     }
 }
