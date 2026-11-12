@@ -33,6 +33,19 @@
             }
             Console.WriteLine("____________________________________");
             Console.WriteLine(route1.CountAdresses());
+            Console.WriteLine("____________________________________");
+
+            parcel3.AddEvent(ParcelStatus.Posted);
+            parcel3.AddEvent(ParcelStatus.InTransit);
+            foreach(TrackingEvent item in parcel3.Events)
+            {
+                Console.WriteLine(item.GetDescription());
+            }
+            Console.WriteLine(parcel3.GetDescription());
+            Console.WriteLine("____________________________________");
+            parcel3.AddEvent(ParcelStatus.Delivered);
+            parcel3.AddEvent(ParcelStatus.InTransit);
+            Console.WriteLine(parcel3.GetDescription());
         }
     }
 }

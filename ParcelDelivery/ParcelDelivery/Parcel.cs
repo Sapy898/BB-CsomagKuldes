@@ -22,7 +22,7 @@ namespace ParcelDelivery
         public int WeightGrams
         {
             get { return _weightGrams; }
-            set 
+            set
             {
                 if (value < 1)
                 {
@@ -37,6 +37,18 @@ namespace ParcelDelivery
         {
             get { return _events; }
         }
+        public bool IsDelivered()
+        {
+            bool isDelivered = false;
+            foreach (TrackingEvent item in Events)
+            {
+                if (item.Status == ParcelStatus.Delivered)
+                {
+                    isDelivered = true;
+                }
+            }
+            return isDelivered;
+        }
         public Parcel(string code, string adress, int weightGrams)
         {
             _code = code;
@@ -48,11 +60,16 @@ namespace ParcelDelivery
 
         public virtual string GetDescription()
         {
-            return $"{_code}: {_adress}, {_weightGrams}g, {this.GetShippingFee()} Ft";
+            if (Events.Count > 0)
+            {
+                return $"{_code}({Events.Count} állapot): {_adress}, {_weightGrams}g, {this.GetShippingFee()} Ft";
+            }
+            else
+                return $"{_code}: {_adress}, {_weightGrams}g, {this.GetShippingFee()} Ft";
         }
         public virtual bool CanGoInLocker()
         {
-            if(_weightGrams <= 2000)
+            if (_weightGrams <= 2000)
                 return true;
             else
                 return false;
@@ -63,6 +80,19 @@ namespace ParcelDelivery
             return _adress;
         }
 
-        
+        public TrackingEvent AddEvent(ParcelStatus status)
+        {
+            if (status == ParcelStatus.Delivered)
+            {
+                Console.WriteLine($"Nem lehet {this.GetDescription()} csomagnak új állapotot adni");
+                return null;
+            }
+            else
+            {
+                TrackingEvent tE = new TrackingEvent(status, this);
+                _events.Add(tE);
+                return tE;
+            }
+        }
     }
 }
